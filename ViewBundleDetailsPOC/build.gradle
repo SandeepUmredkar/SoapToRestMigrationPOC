@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+sourceCompatibility = 1.6
+version = "1.0"
+jar {
+	manifest {
+		attributes 'MyApp': 'ToPlayWithTechnologies', 'Implementation-Version': version
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+ext.springVersion = "3.2.4.RELEASE"
+ext.junitVersion = "4.11"
+ext.mockitoVersion = "1.9.5"
+dependencies {
+	compile "org.springframework:spring-core:${springVersion}"
+	compile "org.springframework:spring-webmvc:${springVersion}"
+	compile "org.springframework:spring-web:${springVersion}"
+	compile "jstl:jstl:1.2"
+	
+	testCompile "junit:junit:${junitVersion}"
+	testCompile "junit:junit-dep:${junitVersion}"
+	testCompile "org.easytesting:fest-assert:1.4"
+	testCompile "org.mockito:mockito-all:${mockitoVersion}"
+	testCompile "org.mockito:mockito-core:${mockitoVersion}"
+}

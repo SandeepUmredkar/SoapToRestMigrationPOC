@@ -1,0 +1,29 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from SOAPServiceJsonProviderService WSDL service -->
+
+  <service name="SOAPServiceJsonProvider" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.o2.cts.com"/>
+      <parameter name="wsdlServiceElement" value="SOAPServiceJsonProviderService"/>
+      <parameter name="schemaQualified" value="http://service.o2.cts.com"/>
+      <parameter name="wsdlServicePort" value="SOAPServiceJsonProvider"/>
+      <parameter name="className" value="com.cts.o2.service.SOAPServiceJsonProviderSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="SOAPServiceJsonProvider"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getJsonForSOAP" qname="operNS:getJsonForSOAP" xmlns:operNS="http://service.o2.cts.com" returnQName="retNS:getJsonForSOAPReturn" xmlns:retNS="http://service.o2.cts.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:name" xmlns:pns="http://service.o2.cts.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getJsonForSOAP"/>
+
+  </service>
+</deployment>
