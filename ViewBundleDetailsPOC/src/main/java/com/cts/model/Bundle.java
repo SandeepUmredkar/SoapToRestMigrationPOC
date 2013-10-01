@@ -1,20 +1,10 @@
 package com.cts.model;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="bundle")
 public class Bundle {
-	private String bundle;
-
-	/**
-	 * @return the bundle
-	 */
-	public String getBundle() {
-		return bundle;
-	}
-
-	/**
-	 * @param bundle the bundle to set
-	 */
-	public void setBundle(String bundle) {
-		this.bundle = bundle;
-	}
-
+	@XmlElement(name = "bundlevalue")
+	private String bundleValue;
 }

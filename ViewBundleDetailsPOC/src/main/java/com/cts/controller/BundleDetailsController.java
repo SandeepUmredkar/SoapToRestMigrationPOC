@@ -27,7 +27,6 @@ public class BundleDetailsController {
 	@RequestMapping(value="/getbundle/{msisdn}", method=RequestMethod.GET)
 	@ResponseBody
 	public Bundle getBundle(@PathVariable String msisdn) throws UnsupportedOperationException, SOAPException, JAXBException {
-		System.out.println(msisdn);
 		return bundleDetailsService.getBundle(msisdn);
 	}
 }

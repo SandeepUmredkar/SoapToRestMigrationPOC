@@ -25,11 +25,11 @@ public class BundleDetailsControllerTest {
 		String msisdn = "447000000021";
 		bundleDetailsController = new BundleDetailsController(bundleDetailsService);
 		Bundle bundle = new Bundle();
-		bundle.setBundle("Bundle");
+		bundle.setBundleValue("Bundle");
 		
 		//when and verify
 		when(bundleDetailsService.getBundle(msisdn)).thenReturn(bundle);
-		Assert.assertEquals(bundle.getBundle(), bundleDetailsController.getBundle(msisdn).getBundle());
+		Assert.assertEquals(bundle.getBundleValue(), bundleDetailsController.getBundle(msisdn).getBundleValue());
 		verify(bundleDetailsService).getBundle(msisdn);
 	}
 }
