@@ -22,7 +22,7 @@ public class BundleDetailsService {
 		SOAPMessage soapResponse = soapClientUtility.getSoapForUrl("http://localhost:8080/StubForViewAllowance/services/SOAPServiceJsonProvider");
 		JAXBContext jc = JAXBContext.newInstance(Bundle.class);
 		Unmarshaller u = jc.createUnmarshaller();
-		Bundle bundle = (Bundle) u.unmarshal(soapResponse.getSOAPPart().getContent());
+		Bundle bundle = (Bundle) u.unmarshal(soapResponse.getSOAPBody());
 		return bundle;
 	}
 }
