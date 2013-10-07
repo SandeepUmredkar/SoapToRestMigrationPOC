@@ -6,5 +6,5 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="bundle")
 public class Bundle {
 	@XmlElement(name = "bundlevalue")
-	private String bundleValue;
+	public String bundleValue;
 }

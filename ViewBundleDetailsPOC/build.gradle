@@ -22,6 +22,10 @@ dependencies {
 	compile "org.springframework:spring-web:${springVersion}"
 	compile "jstl:jstl:1.2"
 	
+	testCompile "org.springframework:spring-core:${springVersion}"
+	testCompile "org.springframework:spring-webmvc:${springVersion}"
+	testCompile "org.springframework:spring-web:${springVersion}"
+	testCompile "jstl:jstl:1.2"
 	testCompile "junit:junit:${junitVersion}"
 	testCompile "junit:junit-dep:${junitVersion}"
 	testCompile "org.easytesting:fest-assert:1.4"

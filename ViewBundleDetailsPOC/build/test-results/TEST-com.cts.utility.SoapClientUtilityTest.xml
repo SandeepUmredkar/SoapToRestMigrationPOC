@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="Sandep-ThinkPad-L420" name="com.cts.utility.SoapClientUtilityTest" tests="1" time="0.01" timestamp="2013-10-07T06:28:16">
+  <properties />
+  <testcase classname="com.cts.utility.SoapClientUtilityTest" name="itShouldCreateSoapRequestAndGetSoapResponse" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
