@@ -1,9 +1,13 @@
 package com.cts.utility;
 
+import java.io.IOException;
+import java.util.Hashtable;
 import java.util.Vector;
-
+import org.apache.xmlrpc.XmlRpcException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RPCUtility {
     private final XmlUrlResponse xmlUrlResponse;
 	
@@ -11,8 +15,9 @@ public class RPCUtility {
 	public RPCUtility(XmlUrlResponse xmlUrlResponse) {
 		this.xmlUrlResponse = xmlUrlResponse;
 	}
-	 public Object getOutputXmlFromRpc(String serviceUrl, String methodName, Vector methodParams){
-	        return xmlUrlResponse.getOutputXml(serviceUrl, methodName, methodParams);
-	    }
+	
+	 public Object getOutputXmlFromRpc(String methodName, Vector<Hashtable<String, Object>> methodParams) throws XmlRpcException, IOException {
+	        return xmlUrlResponse.getOutputXml(methodName, methodParams);
+	 }
 
 }

@@ -15,8 +15,8 @@ public class SoapClientUtility {
 		this.soapUrlResponse = soapUrlResponse;
 	}
 	
-    public SOAPMessage getSoapMessageForUrl(String soapUrl) throws SOAPException{
-        return soapUrlResponse.getSoapResponse(soapUrl, soapUrlRequest.getSoapRequest());
+    public SOAPMessage getSoapMessageForUrl() throws SOAPException{
+        return soapUrlResponse.getSoapResponse(null, soapUrlRequest.getSoapRequest());
     }
 }
 

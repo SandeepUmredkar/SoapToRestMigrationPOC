@@ -30,6 +30,6 @@ public class SoapClientUtilityTest {
 		when(soapUrlRequest.getSoapRequest()).thenReturn(requestSoapMessage);
 		when(soapUrlResponse.getSoapResponse(soapUrl, requestSoapMessage)).thenReturn(responseSoapMessage);
 		//verify
-		Assert.assertEquals(responseSoapMessage, soapClientUtility.getSoapMessageForUrl(soapUrl));
+		Assert.assertEquals(responseSoapMessage, soapClientUtility.getSoapMessageForUrl());
 	}
 }

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" hostname="Sandep-ThinkPad-L420" name="com.cts.controller.WebCamTest" tests="1" time="0.118" timestamp="2013-09-04T13:25:28">
-  <properties />
-  <testcase classname="com.cts.controller.WebCamTest" name="itShouldReturnTheHomePageOfMyApp" time="0.0020" />
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

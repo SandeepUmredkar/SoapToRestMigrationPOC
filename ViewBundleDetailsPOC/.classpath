@@ -91,4 +91,19 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/sandeep/NewPOC/POC/SoapToRestMigrationPOC/ViewBundleDetailsPOC/unresolved dependency - org.apache.xmlrpc xmlrpc 3.1.2" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/sandeep/NewPOC/POC/SoapToRestMigrationPOC/ViewBundleDetailsPOC/unresolved dependency - org.apache.xmlrpc xmlrpc-client 3.1.2" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/sandeep/NewPOC/POC/SoapToRestMigrationPOC/ViewBundleDetailsPOC/unresolved dependency - org.apache.xmlrpc xmlrpc-common 3.1.2" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
 </classpath>

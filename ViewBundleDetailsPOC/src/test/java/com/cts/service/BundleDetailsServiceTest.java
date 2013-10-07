@@ -4,57 +4,94 @@ import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import javax.xml.bind.JAXBException;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPMessage;
+import java.io.IOException;
+import java.util.Date;
+import java.util.Hashtable;
+import java.util.Vector;
 
+import javax.xml.bind.JAXBException;
+import javax.xml.soap.SOAPException;
+
+import org.apache.xmlrpc.XmlRpcException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.w3c.dom.Node;
 
+import com.cts.constants.InputParameters;
 import com.cts.model.Bundle;
-import com.cts.utility.SoapClientUtility;
+import com.cts.model.Shield;
+import com.cts.utility.RPCUtility;
 @RunWith(MockitoJUnitRunner.class)
 public class BundleDetailsServiceTest {
 	private BundleDetailsService bundleDetailsService;
 	@Mock
-	SoapClientUtility soapClientUtility;
-	@Mock
-	SOAPMessage soapMessage;
-	@Mock
-	SOAPBody soapBody; 
-	@Mock
-	Node firstNode;
-	@Mock
-	Node SecondNode;
-	@Mock
-	Node thirdNode;
+	RPCUtility rpcUtility;
 	String urlForSoapService = "http://localhost:8080/StubForViewAllowance/services/SOAPServiceJsonProvider";
 	@Test
-	public void itShouldReturnBundleFromXMLProducedFromSoapCall() throws UnsupportedOperationException, SOAPException, JAXBException{
+	public void itShouldReturnBundleFromXMLProducedFromXmlRpcCall() throws UnsupportedOperationException, SOAPException, JAXBException, XmlRpcException, IOException{
 		//given
-		bundleDetailsService = new BundleDetailsService(soapClientUtility, urlForSoapService);
+		String methodName = "getShieldBasicData";
+		bundleDetailsService = new BundleDetailsService(rpcUtility, methodName);
 		String xmlForBundle = "<bundle><bundlevalue>mockValue</bundlevalue></bundle>";
+		Shield shield = new Shield();
+		shield.setMsisdn("447730336486");
+		shield.setDate(new Date());
+		shield.setStatus(2);
+		shield.setVagever("U");
+		shield.setSurname("");
+		shield.setForename("");
+		shield.setTitle("");
+		shield.setHouseNumber(0);
+		shield.setHouseName("");
+		shield.setStreetName("");
+		shield.setPostCode("");
+		shield.setDateOfBirth(new Date());
+		shield.setCardNumber("33333");
+		shield.setAgeVerMethod("A");
+		shield.setAgeVerPin("0000");
+		shield.setParentalControlPin("01234");
+		shield.setUseDataMarketing(Boolean.FALSE);
+		shield.setActionedBy("tesco");
+		shield.setChannelId("TES");
+		shield.setActionChannelID("O2S");
+		shield.setPaymentType(1);
+		shield.setBusinessUserFlag(0);
+		shield.setAvAttemptNo(1);
+		
+		Hashtable<String, Object> methodParmeters = new Hashtable<String, Object>();
+		methodParmeters.put(InputParameters.MSISDN, "447730336486");
+      	methodParmeters.put(InputParameters.DATE, new Date());
+        methodParmeters.put(InputParameters.STATUS, 2);
+        methodParmeters.put(InputParameters.VAGE_VERIFICATION, "U");
+        methodParmeters.put(InputParameters.SURNAME, "");
+        methodParmeters.put(InputParameters.FORENAME, "");
+        methodParmeters.put(InputParameters.TITLE, "");
+        methodParmeters.put(InputParameters.HOUSE_NUMBER, 0);
+        methodParmeters.put(InputParameters.HOUSE_NAME, "");
+        methodParmeters.put(InputParameters.STREET_NAME, "");
+        methodParmeters.put(InputParameters.POST_CODE, "");
+        methodParmeters.put(InputParameters.DATE_OF_BIRTH, new Date());
+        methodParmeters.put(InputParameters.CARD_NUMBER, "33333");
+        methodParmeters.put(InputParameters.AGE_VERIFICATION_METHOD, "A");
+        methodParmeters.put(InputParameters.AGE_VERIFICATION_PIN, "0000");
+        methodParmeters.put(InputParameters.PARENTAL_CONTROL_PIN, "01234");
+        methodParmeters.put(InputParameters.USE_DATA_MARKETING, Boolean.FALSE);
+        methodParmeters.put(InputParameters.ACTIONED_BY, "tesco");
+        methodParmeters.put(InputParameters.CHANNEL_ID, "TES");
+        methodParmeters.put(InputParameters.ACTION_CHANNEL_ID, "O2S");
+        methodParmeters.put(InputParameters.PAYMENT_TYPE, 1);
+        methodParmeters.put(InputParameters.BUSINESS_USER_FLAG, 0);
+        methodParmeters.put(InputParameters.AV_ATTEMPT_NO, 1);
+        Vector<Hashtable<String, Object>> methodParams = new Vector<Hashtable<String, Object>>();
+        methodParams.add(methodParmeters);
 		
 		//when
-		when(soapClientUtility.getSoapMessageForUrl(urlForSoapService)).thenReturn(soapMessage);
-		when(soapMessage.getSOAPBody()).thenReturn(soapBody);
-		when(soapBody.getFirstChild()).thenReturn(firstNode);
-		when(firstNode.getFirstChild()).thenReturn(SecondNode);
-		when(SecondNode.getFirstChild()).thenReturn(thirdNode);
-		when(thirdNode.getTextContent()).thenReturn(xmlForBundle);
-		Bundle actualBundle = bundleDetailsService.getBundle("447000000000");
+		when(rpcUtility.getOutputXmlFromRpc(methodName, methodParams)).thenReturn(xmlForBundle);
+		Bundle actualBundle = bundleDetailsService.getBundle(shield);
 		
 		//verify
-		verify(soapClientUtility).getSoapMessageForUrl(urlForSoapService);
-		verify(soapMessage).getSOAPBody();
-		verify(soapBody).getFirstChild();
-		verify(firstNode).getFirstChild();
-		verify(SecondNode).getFirstChild();
-		verify(thirdNode).getTextContent();
+		verify(rpcUtility).getOutputXmlFromRpc(methodName, methodParams);
 		assertThat(actualBundle.bundleValue).isEqualTo("mockValue");
 	}
 }
