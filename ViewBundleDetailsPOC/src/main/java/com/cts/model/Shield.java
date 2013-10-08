@@ -2,10 +2,16 @@ package com.cts.model;
 
 import java.util.Date;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.codehaus.jackson.annotate.JsonProperty;
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Shield {
+	@JsonProperty("MSISDN")
 	private String msisdn;
 	private Date date;
+	@JsonProperty("VAGEVER")
 	private String vagever;
+	@JsonProperty("STATUS")
 	private Integer status;
 	private String surname;
 	private String forename;
@@ -18,9 +24,33 @@ public class Shield {
 	private String cardNumber;
 	private String ageVerMethod;
 	private String ageVerPin;
+	@JsonProperty("PARENTAL_CONTROL_PIN")
 	private String parentalControlPin;
 	private Boolean useDataMarketing;
 	private String actionedBy;
+	private String channelId;
+	private String actionChannelID;
+	private Integer paymentType;
+	@JsonProperty("BUSINESS_USER_FLAG")
+	private Integer businessUserFlag;
+	public Integer getMaxAvAttempt() {
+		return maxAvAttempt;
+	}
+	public void setMaxAvAttempt(Integer maxAvAttempt) {
+		this.maxAvAttempt = maxAvAttempt;
+	}
+	public Integer getPrevioudStatus() {
+		return previoudStatus;
+	}
+	public void setPrevioudStatus(Integer previoudStatus) {
+		this.previoudStatus = previoudStatus;
+	}
+	@JsonProperty("AV_ATTEMPT_NO")
+	private Integer avAttemptNo;
+	@JsonProperty("MAX_AV_ATTEMPT")
+	private Integer maxAvAttempt;
+	@JsonProperty("PREVIOUS_STATUS")
+	private Integer previoudStatus;
 	public String getMsisdn() {
 		return msisdn;
 	}
@@ -159,10 +189,4 @@ public class Shield {
 	public void setBusinessUserFlag(Integer businessUserFlag) {
 		this.businessUserFlag = businessUserFlag;
 	}
-	private String channelId;
-	private String actionChannelID;
-	private Integer paymentType;
-	private Integer businessUserFlag;
-	private Integer avAttemptNo;
-	
 }

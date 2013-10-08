@@ -16,8 +16,8 @@ public class RPCUtility {
 		this.xmlUrlResponse = xmlUrlResponse;
 	}
 	
-	 public Object getOutputXmlFromRpc(String methodName, Vector<Hashtable<String, Object>> methodParams) throws XmlRpcException, IOException {
-	        return xmlUrlResponse.getOutputXml(methodName, methodParams);
+	 public Object getOutput(String methodName, Vector<Hashtable<String, Object>> methodParams) throws XmlRpcException, IOException {
+	        return xmlUrlResponse.getOutput(methodName, methodParams);
 	 }
 
 }

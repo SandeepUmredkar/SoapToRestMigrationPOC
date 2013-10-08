@@ -5,8 +5,8 @@ import java.net.MalformedURLException;
 import java.util.Hashtable;
 import java.util.Vector;
 
-import org.apache.xmlrpc.XmlRpcClient;
 import org.apache.xmlrpc.XmlRpcException;
+import org.apache.xmlrpc.XmlRpcClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -18,7 +18,7 @@ public class XmlUrlResponse {
 		this.xmlRpcClient = new XmlRpcClient(urlForService);;
 	}
 	
-	public Object getOutputXml(String methodName, Vector<Hashtable<String, Object>> methodParams) throws XmlRpcException, IOException {
+	public Object getOutput(String methodName, Vector<Hashtable<String, Object>> methodParams) throws XmlRpcException, IOException {
 			return xmlRpcClient.execute(methodName, methodParams);
 	}
 }

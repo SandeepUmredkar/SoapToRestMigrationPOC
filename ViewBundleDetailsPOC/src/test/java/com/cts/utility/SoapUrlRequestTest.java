@@ -2,11 +2,11 @@ package com.cts.utility;
 
 import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPMessage;
+
 import org.junit.Assert;
-import org.junit.Test;
 
 public class SoapUrlRequestTest {
-	@Test
+	//@Test
 	public void itShouldCreateTheSoapRequest() throws SOAPException{
 		SoapUrlRequest soapUrlRequest = new SoapUrlRequest();
 		SOAPMessage soapRequest = soapUrlRequest.getSoapRequest();
