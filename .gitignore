@@ -9,5 +9,6 @@ ViewBundleDetailsPOC/.gradle/
 ViewBundleDetailsPOC/build/
 ViewBundleDetailsPOC/.settings/
 ViewBundleDetailsPOC/bin/
+ViewBundleDetailsPOC/.classpath
 #package exclusion
 .package
