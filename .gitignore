@@ -4,3 +4,10 @@
 *.jar
 *.war
 *.ear
+#folders
+ViewBundleDetailsPOC/.gradle/
+ViewBundleDetailsPOC/build/
+ViewBundleDetailsPOC/.settings/
+ViewBundleDetailsPOC/bin/
+#package exclusion
+.package
