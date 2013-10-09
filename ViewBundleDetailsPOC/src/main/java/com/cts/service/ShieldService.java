@@ -25,6 +25,7 @@ public class ShieldService {
 	private final String methodName;
 	private final Gson gson;
 	private final ObjectMapper objectMapper; 
+	
 	@Autowired
 	public ShieldService(RPCUtility rpcUtility,@Value("${methodName}") String methodName) throws JAXBException{
 		this.rpcUtility = rpcUtility;
@@ -41,7 +42,6 @@ public class ShieldService {
         String mapString = rpcUtility.getOutput(methodName, methodParams).toString();
 		@SuppressWarnings("rawtypes")
 		Map mapFromString = Splitter.on(',').trimResults().withKeyValueSeparator("=").split(mapString.replace("{", "").replace("}", ""));
-		System.out.println(mapFromString.toString());
 		return objectMapper.readValue(gson.toJson(mapFromString), Shield.class);
 	}
 }
