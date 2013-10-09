@@ -6,6 +6,11 @@
 	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container" exported="true"/>
+	<classpathentry sourcepath="/home/sandeep/.gradle/caches/artifacts-14/filestore/commons-codec/commons-codec/1.8/source/ea7b97bfc46dc4b28bc53af3e530199a657933bf/commons-codec-1.8-sources.jar" kind="lib" path="/home/sandeep/.gradle/caches/artifacts-14/filestore/commons-codec/commons-codec/1.8/jar/af3be3f74d25fc5163b54f56a0d394b462dafafd/commons-codec-1.8.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
 	<classpathentry sourcepath="/home/sandeep/.gradle/caches/artifacts-14/filestore/com.google.guava/guava/15.0/source/36b6a585c0f0c63bd85fb04db0dcb7b217298956/guava-15.0-sources.jar" kind="lib" path="/home/sandeep/.gradle/caches/artifacts-14/filestore/com.google.guava/guava/15.0/bundle/ed727a8d9f247e2050281cb083f1c77b09dcb5cd/guava-15.0.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>

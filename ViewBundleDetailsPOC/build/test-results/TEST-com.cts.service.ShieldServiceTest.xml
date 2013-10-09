@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" hostname="Sandep-ThinkPad-L420" name="com.cts.service.ShieldServiceTest" tests="1" time="0.39" timestamp="2013-10-08T11:03:44">
+<testsuite errors="0" failures="0" hostname="Sandep-ThinkPad-L420" name="com.cts.service.ShieldServiceTest" tests="1" time="0.717" timestamp="2013-10-09T04:27:23">
   <properties />
-  <testcase classname="com.cts.service.ShieldServiceTest" name="itShouldReturnShieldFromXMLProducedFromXmlRpcCall" time="0.23" />
+  <testcase classname="com.cts.service.ShieldServiceTest" name="itShouldReturnShieldFromXMLProducedFromXmlRpcCall" time="0.251" />
   <system-out><![CDATA[{STATUS=30, AV_ATTEMPT_NO=0, MAX_AV_ATTEMPT=10, BUSINESS_USER_FLAG=0, PREVIOUS_STATUS=1}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
