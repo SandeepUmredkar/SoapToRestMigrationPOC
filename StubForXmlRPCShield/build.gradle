@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+sourceCompatibility = 1.6
+version = "1.0"
+jar {
+	manifest {
+		attributes 'StubForViewSheildBasicData': 'Stub for POC for Shield Basic Data', 'Implementation-Version': version
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+ext.springVersion = "3.2.4.RELEASE"
+ext.junitVersion = "4.11"
+ext.mockitoVersion = "1.9.5"
+ext.jacksonVersion = "1.9.13"
+dependencies {
+	compile files('libs/cis69mc.jar')
+	
+	testCompile "junit:junit:${junitVersion}"
+	testCompile "junit:junit-dep:${junitVersion}"
+	testCompile "org.easytesting:fest-assert:1.4"
+	testCompile "org.mockito:mockito-all:${mockitoVersion}"
+	testCompile "org.mockito:mockito-core:${mockitoVersion}"
+}

@@ -10,5 +10,10 @@ ViewSheildBasicData/build/
 ViewSheildBasicData/.settings/
 ViewSheildBasicData/bin/
 ViewSheildBasicData/.classpath
+StubForXmlRPCShield/.gradle/
+StubForXmlRPCShield/build/
+StubForXmlRPCShield/.settings/
+StubForXmlRPCShield/bin/
+StubForXmlRPCShield/.classpath
 #package exclusion
 .package
