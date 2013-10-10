@@ -1,8 +1,5 @@
 .project
 *.class
-ViewBundleDetailsPOC/.gradle
-ViewBundleDetailsPOC/build
-ViewBundleDetailsPOC/.settings
 # Package Files #
 *.jar
 *.war
