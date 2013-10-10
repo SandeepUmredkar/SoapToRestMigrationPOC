@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" hostname="Sandep-ThinkPad-L420" name="com.cts.service.ShieldServiceTest" tests="1" time="0.41" timestamp="2013-10-10T06:37:02">
-  <properties />
-  <testcase classname="com.cts.service.ShieldServiceTest" name="itShouldReturnShieldFromXMLProducedFromXmlRpcCall" time="0.231" />
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
