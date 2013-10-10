@@ -28,7 +28,8 @@ public class ShieldController {
 		
 	}
 	
-	@RequestMapping(value="/getshieldbasicdata/{msisdn}", method=RequestMethod.GET)
+	@RequestMapping(value="/getshieldbasicdata/{msisdn}", method=RequestMethod.GET,
+	produces = "application/json; charset=utf-8")
 	@ResponseBody
 	public Shield getShieldBasicData(@PathVariable String msisdn) throws XmlRpcException, IOException, JAXBException {
 		log.info("Entering into REST Service to fetch the Shield Basic Data");

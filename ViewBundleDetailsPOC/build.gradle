@@ -6,7 +6,7 @@ sourceCompatibility = 1.6
 version = "1.0"
 jar {
 	manifest {
-		attributes 'MyApp': 'ToPlayWithTechnologies', 'Implementation-Version': version
+		attributes 'ViewSheildBasicData': 'POC for Shield Basic Data', 'Implementation-Version': version
 	}
 }
 
