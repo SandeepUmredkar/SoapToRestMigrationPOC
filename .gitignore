@@ -5,10 +5,10 @@
 *.war
 *.ear
 #folders
-ViewBundleDetailsPOC/.gradle/
-ViewBundleDetailsPOC/build/
-ViewBundleDetailsPOC/.settings/
-ViewBundleDetailsPOC/bin/
-ViewBundleDetailsPOC/.classpath
+ViewSheildBasicData/.gradle/
+ViewSheildBasicData/build/
+ViewSheildBasicData/.settings/
+ViewSheildBasicData/bin/
+ViewSheildBasicData/.classpath
 #package exclusion
 .package

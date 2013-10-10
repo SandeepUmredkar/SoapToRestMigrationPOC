@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="Sandep-ThinkPad-L420" name="com.cts.controller.ShieldControllerTest" tests="1" time="0.019" timestamp="2013-10-10T06:37:02">
+  <properties />
+  <testcase classname="com.cts.controller.ShieldControllerTest" name="itShouldReturnShield" time="0.013" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[log4j:WARN No appenders could be found for logger (com.cts.controller.ShieldController).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+]]></system-err>
+</testsuite>
