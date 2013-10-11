@@ -1,4 +1,4 @@
 allprojects {
     version = '1.0'
-    sourceCompatiblity = 1.5
+    project.sourceCompatibility = org.gradle.api.JavaVersion.VERSION_1_5
 }
