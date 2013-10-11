@@ -1,0 +1,4 @@
+rootProject.name = "ViewSheildBasicData"
+
+include "ViewSheildBasicData"
+include "StubForXmlRPCShield"

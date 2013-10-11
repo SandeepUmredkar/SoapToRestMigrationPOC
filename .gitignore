@@ -15,5 +15,6 @@ StubForXmlRPCShield/build/
 StubForXmlRPCShield/.settings/
 StubForXmlRPCShield/bin/
 StubForXmlRPCShield/.classpath
+.gradle/
 #package exclusion
 .package

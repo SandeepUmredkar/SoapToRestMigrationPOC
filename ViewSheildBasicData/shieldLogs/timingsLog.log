@@ -1,0 +1,6 @@
+12:24:33,247  INFO ShieldController:35 - Entering into REST Service to fetch the Shield Basic Data
+12:24:33,249  INFO ShieldController:37 - Exiting the REST service of Shield Basic Data
+12:30:01,229  INFO ShieldController:35 - Entering into REST Service to fetch the Shield Basic Data
+12:30:01,231  INFO ShieldController:37 - Exiting the REST service of Shield Basic Data
+12:30:38,517  INFO ShieldController:35 - Entering into REST Service to fetch the Shield Basic Data
+12:30:38,518  INFO ShieldController:37 - Exiting the REST service of Shield Basic Data

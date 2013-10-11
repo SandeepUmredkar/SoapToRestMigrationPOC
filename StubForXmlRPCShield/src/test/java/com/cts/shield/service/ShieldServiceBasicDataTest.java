@@ -19,7 +19,7 @@ public class ShieldServiceBasicDataTest {
 		Assert.assertEquals("{STATUS=0}", actualMap);
 	}
 	
-	@Test
+	//@Test
 	public void thisMethodToTestWhetherTheServiceIsWorking() throws XmlRpcException, IOException{
 		XmlRpcClient server = new XmlRpcClient("http://localhost:8071/RPC2"); //
 		Vector<Object> methodParams = new Vector<Object>();
